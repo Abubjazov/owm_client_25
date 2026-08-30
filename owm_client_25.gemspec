@@ -8,12 +8,11 @@ Gem::Specification.new do |spec|
   spec.authors = ['Abubjazov']
   spec.email = ['abubjazov@proton.me']
 
-  spec.summary     = 'Ruby-клиент для получения текущей погоды через OpenWeatherMap API v2.5.'
+  spec.summary     = 'Ruby client for fetching current weather via OpenWeatherMap API v2.5'
   spec.description = <<~DESC
-    Этот гем предоставляет удобный интерфейс для интеграции с OpenWeatherMap API версии 2.5.
-    Он позволяет запрашивать актуальные данные о погоде по географическим координатам
-    (широте и долготе), берет на себя формирование URL-запросов и возвращает
-    структурированный ответ.
+    This gem provides a convenient interface for OpenWeatherMap API v2.5 integration.#{' '}
+    It allows fetching current weather data by geographic coordinates (latitude and longitude),#{' '}
+    handles URL generation, and returns a structured response.
   DESC
   spec.homepage = 'https://github.com/Abubjazov/owm_client_25'
   spec.license = 'MIT'
@@ -37,6 +36,9 @@ Gem::Specification.new do |spec|
   spec.bindir = 'exe'
   spec.executables = spec.files.grep(%r{\Aexe/}) { |f| File.basename(f) }
   spec.require_paths = ['lib']
+
+  spec.add_dependency 'faraday', '~> 2.14', '>= 2.14.3'
+  spec.add_dependency 'zeitwerk', '~> 2.8', '>= 2.8.3'
 
   # Uncomment to register a new dependency of your gem
   # spec.add_dependency "example-gem", "~> 1.0"
