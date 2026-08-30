@@ -8,17 +8,22 @@ Gem::Specification.new do |spec|
   spec.authors = ['Abubjazov']
   spec.email = ['abubjazov@proton.me']
 
-  spec.summary = 'TODO: Write a short summary, because RubyGems requires one.'
-  spec.description = 'TODO: Write a longer description or delete this line.'
-  spec.homepage = "TODO: Put your gem's website or public repo URL here."
+  spec.summary     = 'Ruby-клиент для получения текущей погоды через OpenWeatherMap API v2.5.'
+  spec.description = <<~DESC
+    Этот гем предоставляет удобный интерфейс для интеграции с OpenWeatherMap API версии 2.5.
+    Он позволяет запрашивать актуальные данные о погоде по географическим координатам
+    (широте и долготе), берет на себя формирование URL-запросов и возвращает
+    структурированный ответ.
+  DESC
+  spec.homepage = 'https://github.com/Abubjazov/owm_client_25'
   spec.license = 'MIT'
-  spec.required_ruby_version = '>= 3.1.0'
+  spec.required_ruby_version = '>= 3.4.1'
 
-  spec.metadata['allowed_push_host'] = "TODO: Set to your gem server 'https://example.com'"
+  spec.metadata['allowed_push_host'] = 'https://rubygems.org'
 
   spec.metadata['homepage_uri'] = spec.homepage
-  spec.metadata['source_code_uri'] = "TODO: Put your gem's public repo URL here."
-  spec.metadata['changelog_uri'] = "TODO: Put your gem's CHANGELOG.md URL here."
+  spec.metadata['source_code_uri'] = spec.homepage
+  # spec.metadata['changelog_uri'] = spec.homepage
 
   # Specify which files should be added to the gem when it is released.
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.
